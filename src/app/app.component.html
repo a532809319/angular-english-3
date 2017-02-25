@@ -1,3 +1,27 @@
-<h1>
-  {{title}}
-</h1>
+<div [ngClass]="{border: false,background:true}"></div>
+<div  [class.border]="true"></div>
+<div [ngStyle]="{
+'background': 'red',
+'height':'50px'
+
+
+}"></div>
+<h2 dirHighlight  [hightightColor]="'black'" [defaultColor]="'red'">   custom  attribute Diretive  </h2>
+<h2 dirHighlight  [hightightColor]="'black'" [defaultColor]="'red'"> 3444  custom  attribute Diretive  </h2>
+<h1>*ngIf</h1>
+<button  (click)="Swich()" >按钮</button>
+<div   *ngIf="switch">按钮</div>
+<h1>ng for </h1>
+
+<ul>
+    <li *ngFor="let item of items;let i =index">{{item}}+{{i+1}}={{item+i+1}}</li>
+</ul>
+<h1>ngSwich</h1>
+
+
+<div [ngSwitch]="a">
+    <template [ngSwitchCase]="100">1001</template>
+    <template [ngSwitchCase]="200">200</template>
+    <template [ngSwitchCase]="300">3001</template>
+    <template ngSwitchDefault>defult</template>
+</div>
